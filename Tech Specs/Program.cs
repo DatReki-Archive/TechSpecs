@@ -19,15 +19,14 @@ namespace Tech_Specs
             Console.Title = "Tech specs";
             Console.WriteLine("Made by TimoHalofan  13-3-2018\n\n");
 
-            Program c = new Program();
-            c.Stats();
+            Stats();
         }
 
-        PerformanceCounter cpuCounter;
+        static PerformanceCounter cpuCounter;
         private static ManagementObjectSearcher baseboardSearcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_BaseBoard");
         private static ManagementObjectSearcher motherboardSearcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_MotherboardDevice");
-
-        public async void Stats()
+        
+        public static async void Stats()
         {
             try
             {
