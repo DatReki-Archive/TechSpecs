@@ -111,24 +111,25 @@ namespace Tech_Specs
                             }
                         }
                     }
-                    //Motherboard
-                    {
-                        Console.WriteLine($"\nRam: {ram}");
-                        GetRamSlots();
-                        Console.WriteLine("");
-                        Console.WriteLine("Motherboard Properties:");
-                        Console.WriteLine("Availability: " + MotherboardInfo.Availability);
-                        Console.WriteLine("InstallDate: " + MotherboardInfo.InstallDate);
-                        Console.WriteLine("Manufacturer: " + MotherboardInfo.Manufacturer);
-                        Console.WriteLine("Model: " + MotherboardInfo.Model);
-                        Console.WriteLine("PrimaryBusType: " + MotherboardInfo.PrimaryBusType);
-                        Console.WriteLine("Product: " + MotherboardInfo.Product);
-                        Console.WriteLine("SecondaryBusType: " + MotherboardInfo.SecondaryBusType);
-                        Console.WriteLine("SerialNumber: " + MotherboardInfo.SerialNumber);
-                        Console.WriteLine("Status: " + MotherboardInfo.Status);
-                        Console.WriteLine("SystemName: " + MotherboardInfo.SystemName);
-                        Console.WriteLine("Version: " + MotherboardInfo.Version);
-                    }
+                    #region Motherboard
+
+                    Console.WriteLine($"\nRam: {ram}");
+                    GetRamSlots();
+                    Console.WriteLine("");
+                    Console.WriteLine("Motherboard Properties:");
+                    Console.WriteLine("Availability: " + MotherboardInfo.Availability);
+                    Console.WriteLine("InstallDate: " + MotherboardInfo.InstallDate);
+                    Console.WriteLine("Manufacturer: " + MotherboardInfo.Manufacturer);
+                    Console.WriteLine("Model: " + MotherboardInfo.Model);
+                    Console.WriteLine("PrimaryBusType: " + MotherboardInfo.PrimaryBusType);
+                    Console.WriteLine("Product: " + MotherboardInfo.Product);
+                    Console.WriteLine("SecondaryBusType: " + MotherboardInfo.SecondaryBusType);
+                    Console.WriteLine("SerialNumber: " + MotherboardInfo.SerialNumber);
+                    Console.WriteLine("Status: " + MotherboardInfo.Status);
+                    Console.WriteLine("SystemName: " + MotherboardInfo.SystemName);
+                    Console.WriteLine("Version: " + MotherboardInfo.Version);
+
+                    #endregion
                     Console.WriteLine("");
                     //Code for getting GPU('s)
                     ManagementObjectSearcher objvide = new ManagementObjectSearcher("select * from Win32_VideoController");
